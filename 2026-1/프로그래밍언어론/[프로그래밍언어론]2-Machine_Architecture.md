@@ -4,7 +4,7 @@
 integrated set of algorithms and data structures capable of storing and executing programs.
 
 프로그래밍 언어 관점에서 컴퓨터
-$\Rarr$ 프로그램을 저장하고 실행할 수 있는 알고리즘과 자료 구조의 집합
+$\Rightarrow$ 프로그램을 저장하고 실행할 수 있는 알고리즘과 자료 구조의 집합
 
 **Major Components**
 
