@@ -50,7 +50,7 @@ $\Rightarrow$ 프로그램을 저장하고 실행할 수 있는 알고리즘과 
 
 Firmware Computer = Hardware + microprogram
 
-마이크로프로그램을 소프트웨어적으로 흉내내는 것 $\rarr$ 에뮬레이션(Emulation)
+마이크로프로그램을 소프트웨어적으로 흉내내는 것 $\rightarrow$ 에뮬레이션(Emulation)
 
 ### Translator
 
@@ -70,9 +70,9 @@ Firmware Computer = Hardware + microprogram
 $\Rarr $프로그램 실행 시에 사용하는 **알고리즘과 자료구조**
 
 언어 구현에 의하여 정의된 컴퓨터: **virtual computer**
-virtual computer의 기계어 $\rarr$ 언어 번역기에 의해 실행 가능한 프로그램
+virtual computer의 기계어 $\rightarrow$ 언어 번역기에 의해 실행 가능한 프로그램
 
-$\Rarr$ **구현된 프로그래밍 언어는 그 자체로 virtual computer**
+$\Rightarrow$ **구현된 프로그래밍 언어는 그 자체로 virtual computer**
 
 virtual computer 관점에서 다음의 이유로 언어 구현에 차이가 생길 수 있다.
 

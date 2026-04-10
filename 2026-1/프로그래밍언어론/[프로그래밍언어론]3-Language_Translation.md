@@ -2,8 +2,8 @@
 
 $$PL\ def. = Syntax + Semantics$$
 
-**구문(Syntax)** $\Rarr$ 프로그램의 **형태**에 대한 규정
-**의미(Semantics)** $\Rarr$ 프로그램의 **동작**에 대한 규정
+**구문(Syntax)** $\Rightarrow$ 프로그램의 **형태**에 대한 규정
+**의미(Semantics)** $\Rightarrow$ 프로그램의 **동작**에 대한 규정
 
 - 구문 표기법
 
@@ -23,6 +23,7 @@ $$PL\ def. = Syntax + Semantics$$
 ### Translation
 
 > Step 1. 분석(Analysis)
+
 > Step 2. 종합(Synthesis)
 
 **Step 1. Analysis**
@@ -77,11 +78,11 @@ $$PL\ def. = Syntax + Semantics$$
 <noun> ::= boy | girl | cake
 ```
 
-**Replacement Operator($\Rarr$)**: nonterminal을 rule에 따라 치환하는 연산자
+**Replacement Operator($\Rightarrow$)**: nonterminal을 rule에 따라 치환하는 연산자
 
 **Derivation**
 start symbol로부터 replacement operation을 반복 적용하는 과정
-Derivation의 결과로 만들어진 terminal sequence $\Rarr$ sentence
+Derivation의 결과로 만들어진 terminal sequence $\Rightarrow$ sentence
 
 ```
 (예)
@@ -134,10 +135,10 @@ BNF : <identifier> ::= <letter><les>
 
 구문 규칙을 그림으로 표현한 것
 
-- 좌측 nonterminal $\rarr$ 처음 화살표 시작 부분
-- terminal $\rarr$ 동그라미
-- nonterminal $\rarr$ 네모
-- sequence $\rarr$ 화살표
+- 좌측 nonterminal $\rightarrow$ 처음 화살표 시작 부분
+- terminal $\rightarrow$ 동그라미
+- nonterminal $\rightarrow$ 네모
+- sequence $\rightarrow$ 화살표
 
 ![](https://velog.velcdn.com/images/kmwook/post/68edd20d-2041-453e-ab23-e49725513645/image.png)
 
@@ -156,7 +157,7 @@ Derivation "010"
 
 **Ambiguity**
 하나의 문자열을 유도할 때 두 개 이상의 parse tree가 얻어질 경우
-$\Rarr$ **모호한 문법(ambiguous grammar)**
+$\Rightarrow$ **모호한 문법(ambiguous grammar)**
 
 ```
 (예)

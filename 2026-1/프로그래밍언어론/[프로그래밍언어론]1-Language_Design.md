@@ -48,21 +48,21 @@
 
 ### 좋은 언어
 
->**1. Clarity, Simplicity, Unity**
->**2. Orthogonality**
->**3. Language features**
->**4. Support for abstraction**
->**5. Ease of verification**
->**6. Programming environment**
->**7. Program portability**
->**8. Cost of use**
+**1. Clarity, Simplicity, Unity**
+**2. Orthogonality**
+**3. Language features**
+**4. Support for abstraction**
+**5. Ease of verification**
+**6. Programming environment**
+**7. Program portability**
+**8. Cost of use**
 
 **Clarity, Simplicity, Unity**
 간단하고 명확해야 배우기 쉬움
 
 **Orthogonality: 직교성**
 몇 개의 다른 기능을 임의로 예외 없이 조합할 수 있음 
-$\Rarr$ **기능들의 독립성이 보장됨**
+$\Rightarrow$ **기능들의 독립성이 보장됨**
 
 >부족한 직교성의 예시 (`C`)
 
@@ -104,8 +104,8 @@ function returnFunc() { return sayHello; }             // 함수의 반환값으
 **Support for abstraction: 추상화 지원**
 Algorithms + Data Structures = Programs
 
-Algorithm $\rarr$ Control Abstraction
-Data Structure $\rarr$ Data Abstraction
+Algorithm $\rightarrow$ Control Abstraction
+Data Structure $\rightarrow$ Data Abstraction
 
 **Ease of verification: 테스트 용이성**
 
@@ -116,21 +116,21 @@ Data Structure $\rarr$ Data Abstraction
 지원하는 플랫폼이 다양해야함
 
 **Cost of use**
-PL Cost $\Rarr$ 프로그래밍 언어를 이용하여 프로그램을 개발하고 관리하는 데 드는 비용
+PL Cost $\Rightarrow$ 프로그래밍 언어를 이용하여 프로그램을 개발하고 관리하는 데 드는 비용
 
 - cost of program execution (실행 비용)
 - cost of program translation (번역 비용)
 - cost of program creation (개발 비용)
 - cost of program maintenance (유지보수 비용)
 
-과거에는 컴퓨터가 비쌌음 $\rarr$ 실행 비용 중요도 $\uarr$
-현대는 컴퓨터가 비교적 쌈 $\rarr$ 개발 비용, 유지 비용 중요도 $\uarr$
+과거에는 컴퓨터가 비쌌음 $\rightarrow$ 실행 비용 중요도 $\uparrow$
+현대는 컴퓨터가 비교적 쌈 $\rightarrow$ 개발 비용, 유지 비용 중요도 $\uparrow$
 
 ### Programming Paradigm
 
-paradigm $\Rarr$ 한 시대를 지배하는 총체적인 틀 또는 개념
+paradigm $\Rightarrow$ 한 시대를 지배하는 총체적인 틀 또는 개념
 
-programming paradigm $\Rarr$ 문제 해결을 위한 범용적 모델
+programming paradigm $\Rightarrow$ 문제 해결을 위한 범용적 모델
 
 계산 모델과 프로그래밍 패러다임은 밀접한 관계가 있지만, **정확히 일대일 대응하지 않음**
 
@@ -159,7 +159,7 @@ programming paradigm $\Rarr$ 문제 해결을 위한 범용적 모델
 - 특징
 	
     - 함수 합성(function composition) 중심
-    - 자신을 자신에 합성 $\rarr$ 재귀 함수
+    - 자신을 자신에 합성 $\rightarrow$ 재귀 함수
     - 구문: P1(P2(P3(X)))
 	- 예) LISP, Scheme, ML, Haskell
 
@@ -173,7 +173,7 @@ programming paradigm $\Rarr$ 문제 해결을 위한 범용적 모델
 - 특징
 	
     - 문제의 특성을 논리 규칙으로 설정하는 것이 주요 작업
-    - 구문: 'Goal $\larr$ Hypotheses' 목록
+    - 구문: 'Goal $\leftarrow$ Hypotheses' 목록
     - 예) Prolog
 
 **Object Oriented Language**
@@ -187,8 +187,8 @@ programming paradigm $\Rarr$ 문제 해결을 위한 범용적 모델
 	
     - 유일한 identity를 갖는 객체들로 프로그램 구성
     - 객체 = 속성(property) + 행동(behavior)
-    - 속성 $\rarr$ data
-    - 행동 $\rarr$ method
+    - 속성 $\rightarrow$ data
+    - 행동 $\rightarrow$ method
     - 클래스의 실체(instance) = 객체
     - 클래스는 IS-A 관계를 통해 계층을 이룸
     - 예) Smalltalk, C++, Java
@@ -199,7 +199,7 @@ programming paradigm $\Rarr$ 문제 해결을 위한 범용적 모델
 
 **등장 배경**
 
-무분별한 `GOTO`문 사용 $\rarr$ 실행 흐름 복잡해짐
+무분별한 `GOTO`문 사용 $\rightarrow$ 실행 흐름 복잡해짐
 
 **이론적 기반**
 
@@ -227,12 +227,12 @@ programming paradigm $\Rarr$ 문제 해결을 위한 범용적 모델
 프로그래밍 환경 $\neq$ 수행 환경
 
 **분리 컴파일(seperate compilation)**
-하나의 거대한 프로그램 $\rarr$ 여러 개의 소스 코드
-독립적으로 컴파일 $\rarr$ link $\rarr$ 실행 파일
+하나의 거대한 프로그램 $\rightarrow$ 여러 개의 소스 코드
+독립적으로 컴파일 $\rightarrow$ link $\rightarrow$ 실행 파일
 
 분리 컴파일을 지원하기 위해서는
 
-1. 필요한 것 다시 선언 가능하도록 해야함 $\rarr$ 독립 컴파일
+1. 필요한 것 다시 선언 가능하도록 해야함 $\rightarrow$ 독립 컴파일
 2. 특정 순서로 컴파일되도록 해야함(specification이 먼저 오도록)
 3. 관련 정보를 라이브러리 형태로 참조 가능해야함
 
