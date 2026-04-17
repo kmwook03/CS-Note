@@ -29,3 +29,40 @@
     - Step 1: 해시 함수 $h(v) = b$를 계산함
     - Step 2: 블록 $b$에 레코드를 저장함
     - **블록 넘버가 해시 함수에 의해 결정됨**
+
+### Static Hash
+
+할당 가능한 블록 수가 고정됨
+
+**장점**
+
+- 구현이 쉬움
+- 정적 환경에서 최적의 해시 함수 제공
+
+**단점**
+
+- Block Overflow를 피할 수 없음
+
+**Block Overflow**
+
+- 데이터베이스가 커져서 블록 용량 한계를 초과
+- 데이터 분포 쏠림
+- 여러 개의 레코드가 같은 키를 중복으로 가짐
+- 비균일 해시 함수 사용 
+
+static hash의 구조적 특성 때문에 block overflow를 줄일 순 있어도 없앨 수는 없음
+
+**Overflow Handling**
+
+- 방법 1: 넘친 블록을 linked list로 연결
+- 방법 2: Next Block = $B + h(v) + n$
+
+### Dynamic Hash
+
+데이터베이스 크기 변화에 유연하게 대응 가능함
+별도의 bucket address table이 필요함
+
+1. $b$ bits(typically $b = 32$)의 해시 값 생성
+2. $b$ bits 중 $i$ bits를 prefix로 사용 ($0 \le i \le b$, 초기값 $i = 0$)
+3. Bucket address table size = $2^i$
+(버킷 공유에 의해 실제로는 더 작을 수 있음)
