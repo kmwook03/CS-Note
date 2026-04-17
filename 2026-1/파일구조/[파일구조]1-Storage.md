@@ -2,10 +2,10 @@
 
 ### Goal of File System
 
-1. 크고 복잡한 데이터를 저장하기 위한 효율적인 **자료구조(Data Structure)** 를 제공함
-2. 빠른 탐색을 위한 **접근 방법(Access Method)** 을 제공함
-3. **쿼리 프로세싱 방법(Query Processing Method)** 을 제공함
-4. 견고한 **트랜잭션(Transaction) 관리** 를 제공함
+1. 크고 복잡한 데이터를 저장하기 위한 효율적인 **자료구조(Data Structure)** 를 제공함 (OS)
+2. 빠른 탐색을 위한 **접근 방법(Access Method)** 을 제공함 (OS)
+3. **쿼리 프로세싱 방법(Query Processing Method)** 을 제공함 (DBMS)
+4. 견고한 **트랜잭션(Transaction) 관리** 를 제공함 (DBMS)
 5. **분산 환경(Distributed Environment)** 지원을 제공함 (DBMS)
 
 ### Memory Hierarchy

@@ -51,7 +51,7 @@ $4 + 4m + 8(m-1) = 4096 \rightarrow m = \lfloor 341.666... \rfloor = 341$
 
 **Upward split**을 통해 항상 균형을 유지하는 트리
 
-- Root Node: 0 또는 하나 이상의 child node
+- Root Node: 0 또는 두개 이상의 child node
 - Internal Node: $\lceil m/2 \rceil$ ~ $m$ 개의 child node
 - External Node: Data block number
 

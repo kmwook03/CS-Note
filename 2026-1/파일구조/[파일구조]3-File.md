@@ -58,7 +58,7 @@ Nbytes = read(fd, buf, 100);
 **Step 1.** 루트 디렉토리(`/`) 부터 `lik` 디렉토리까지 i-node를 통해 찾아와 "data.txt"의 i-node를 찾음
 **Step 2.** 파일 소유권과 접근 권한을 검사함
 **Step 3.** OpenFileTable에 파일을 등록함
-**Step 4.** 파일 소유권과 접근 권한을 검사함
+**Step 4.** fd를 이용해 OpenFileTable 참조, offset이 가리키는 디스크 블록을 버퍼로 로드
 **Step 5.** buf로 100 bytes 읽어옴
 
 ### File Organization
@@ -70,7 +70,7 @@ File = $\sum$ Block
 ### Fixed Size Record
 
 레코드 내의 필드 개수와 각 필드의 크기가 고정된 구조
-$n^{th}\ record\ address\ -\ (n-1) \times s_r$
+$n^{th}\ record\ address\ =\ (n-1) \times s_r$
 하나의 레코드가 두 개의 블록에 걸쳐서 저장되는 것을 방지해야함
 레코드를 저장하고 남은 블록의 공간은 버림
 
