@@ -261,3 +261,9 @@ Hello, World!   # fd1으로 씀
 This is a test. # fd2로 씀
 This will be written to the file instead of standard output. # STDOUT으로 씀
 ```
+
+---
+
+\<Reference>
+
+- 탁성우, "유닉스응용프로그래밍", 부산대학교

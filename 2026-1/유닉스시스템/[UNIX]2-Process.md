@@ -2,6 +2,78 @@
 
 $\Rightarrow$ 운영체제에 의해 **실행 중인 프로그램**
 
+### Process 생성
+
+`fork()`
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid = fork(); 
+    fork();
+    printf("Hello\n");
+    sleep(10);
+    return 0;
+}
+```
+
+```bash
+$ ./myfork 
+Hello
+Hello
+Hello
+Hello
+```
+
+위 코드에서 프로세스는 총 4개 생성됨.
+
+1. main()
+2. 처음 호출된 fork()
+3. fork()된 프로세스 안에서 호출한 fork()
+4. main()에서 두 번째 fork()
+
+**Orphan** : 부모 프로세스가 먼저 종료됨
+
+```c
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main() {
+    pid_t pid = fork(); // 자식 생성
+
+    if (pid < 0) {
+        perror("Fork failed");
+        return 1;
+    } else if (pid == 0) {
+        // 자식 프로세스
+        sleep(40); // 부모가 exit()할 때까지 수면
+        printf("Child process: PID = %d, Parent PID = %d\n", getpid(), getppid());
+    } else {
+        // 부모 프로세스
+        printf("Parent process: PID = %d, Child PID = %d\n", getpid(), pid);
+        // 바로 종료 -> 자식 고아됨
+        exit(0);
+    }
+
+    return 0;
+}
+```
+
+```bash
+$ ./orphantest
+Parent process: PID = 176000, Child PID = 176001 # 부모 프로세스 출력
+$ ps
+    PID TTY          TIME CMD
+ 171956 pts/0    00:00:00 bash
+ 176001 pts/0    00:00:00 orphantest # 자식이 고아로 살아있음
+ 176014 pts/0    00:00:00 ps
+$ Child process: PID = 176001, Parent PID = 171949 # sleep(40)이 끝나고 출력됨
+```
 
 ### Scheduling
 
@@ -29,11 +101,11 @@ $\Rightarrow$ 운영체제는 프로세스 상태를 저장 및 관리해야 한
 ### ps
 
 ```bash
-kmwook@kmwookgram:~$ ps -af
+$ ps -af
 UID          PID    PPID  C STIME TTY          TIME CMD
 kmwook      1082     776  0 18:47 pts/1    00:00:00 -bash
 kmwook     41641     775  0 19:41 pts/0    00:00:00 ps -af
-kmwook@kmwookgram:~$ ps -l
+$ ps -l
 F S   UID     PID    PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
 4 S  1000     775     774  0  80   0 -  2541 do_wai pts/0    00:00:00 bash
 0 R  1000   41920     775  0  80   0 -  2092 -      pts/0    00:00:00 ps
@@ -174,7 +246,7 @@ int main() {
 **출력**
 
 ```bash
-kmwook@kmwookgram:~/advUNIX/UserLevelContextSwitch$ ./userLevelCtx 
+$ ./userLevelCtx 
 Running Task 0
 Running Task 1
 Running Task 2
@@ -266,3 +338,9 @@ int main() {
 }
 
 ```
+
+---
+
+\<Reference>
+
+- 탁성우, "유닉스응용프로그래밍", 부산대학교

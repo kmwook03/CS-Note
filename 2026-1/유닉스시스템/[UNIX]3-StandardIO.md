@@ -59,10 +59,10 @@ int main() {
 }
 ```
 
-```
-kmwook@kmwookgram:~/advUNIX/StandardIOTest$ ./setbufTestSleep 
-Hello, UNIX!   <--- 2초 후 한 번에 출력됨
-How are you?   <--- 1초 간격으로 하나씩 출력됨
+```bash
+$ ./setbufTestSleep 
+Hello, UNIX!   # 2초 후 한 번에 출력됨
+How are you?   # 1초 간격으로 하나씩 출력됨
 ```
 
 `void setbuf(FILE *fp, char *buf)` : 버퍼 사용을 ON/OFF
@@ -105,8 +105,8 @@ int main() {
 }
 ```
 
-```
-kmwook@kmwookgram:~/advUNIX/StandardIOTest$ ./fopen 
+```bash
+$ ./fopen 
 Success!
 Opening "testfile.txt" in "r" mode!
 ```
@@ -137,10 +137,10 @@ int main() {
 }
 ```
 
-```
-kmwook@kmwookgram:~/advUNIX/StandardIOTest$ ./freopen 
+```bash
+$ ./freopen 
 First printf is on the screen.
-kmwook@kmwookgram:~/advUNIX/StandardIOTest$ cat testfile.txt 
+$ cat testfile.txt 
 Second printf is in the file.
 ```
 
@@ -302,8 +302,8 @@ int main() {
 }
 
 ```
-```
-kmwook@kmwookgram:~/advUNIX/StandardIOTest$ ./binaryIO
+```bash
+$ ./binaryIO
 Input SNO >> 20
 Input Name >> Park
 Input Point >> 90
@@ -317,3 +317,9 @@ Input Point >> 90
 
 - 입력: `scanf()`, `fscanf()`
 - 출력: `printf()`, `fprintf()`
+
+---
+
+\<Reference>
+
+- 탁성우, "유닉스응용프로그래밍", 부산대학교

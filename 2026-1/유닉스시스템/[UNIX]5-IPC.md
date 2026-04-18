@@ -74,3 +74,9 @@
 
 - unnamed semaphore: 세마포어 객체가 메모리 상의 변수임
 - named semaphore: 세마포어 객체가 가상 파일 시스템 상의 파일임
+
+---
+
+\<Reference>
+
+- 탁성우, "유닉스응용프로그래밍", 부산대학교
