@@ -16,8 +16,6 @@
     *   **고정 길이 레코드 (Fixed Size Record):** 구현이 쉽고 배열처럼 `(n-1) * 레코드 크기`로 디스크 주소를 계산할 수 있습니다.
     *   **가변 길이 레코드 (Variable Length Record):** 필드 개수나 크기가 가변적일 때 사용합니다. 구분자(Delimiter)를 쓰거나, 한 페이지 내에서 단편화를 막고 빈 공간을 관리하는 **슬롯 페이지(Slotted Page)** 구조를 사용합니다. 블록 크기보다 큰 이미지/비디오 데이터는 BLOB(Binary Large Object)으로 처리합니다.
 
----
-
 ### 3. I/O 및 버퍼 관리 (I/O and Buffer Management)
 디스크의 느린 속도를 보완하기 위해 메인 메모리 영역인 버퍼를 어떻게 관리하는지 다룹니다.
 
@@ -26,8 +24,6 @@
     *   **LRU (Least Recently Used):** 가장 오랫동안 사용되지 않은 블록을 교체하는 가장 일반적인 방식입니다.
     *   **MRU (Most Recently Used):** 최근에 사용된 것을 바로 교체합니다. 특정 접근 패턴(예: 반복적인 조인 연산 등)에서 유리할 수 있습니다.
     *   **Pinned block:** 디스크로 쫓겨나면 안 되는 중요한 블록을 메모리에 고정시키는 기법입니다.
-
----
 
 ### 4. 인덱싱(Indexing)과 Blocking Factor
 
