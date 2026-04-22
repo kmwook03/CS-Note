@@ -22,10 +22,6 @@ $$PL\ def. = Syntax + Semantics$$
 
 ### Translation
 
-> Step 1. 분석(Analysis)
-
-> Step 2. 종합(Synthesis)
-
 **Step 1. Analysis**
 
 - lexical analysis; scanning
