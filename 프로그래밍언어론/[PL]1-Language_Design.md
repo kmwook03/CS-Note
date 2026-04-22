@@ -48,14 +48,14 @@
 
 ### 좋은 언어
 
-**1. Clarity, Simplicity, Unity**
-**2. Orthogonality**
-**3. Language features**
-**4. Support for abstraction**
-**5. Ease of verification**
-**6. Programming environment**
-**7. Program portability**
-**8. Cost of use**
+1. Clarity, Simplicity, Unity
+2. Orthogonality
+3. Language features
+4. Support for abstraction
+5. Ease of verification
+6. Programming environment
+7. Program portability
+8. Cost of use
 
 **Clarity, Simplicity, Unity**
 간단하고 명확해야 배우기 쉬움
