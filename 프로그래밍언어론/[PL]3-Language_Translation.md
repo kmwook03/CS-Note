@@ -3,6 +3,7 @@
 $$PL\ def. = Syntax + Semantics$$
 
 **구문(Syntax)** $\Rightarrow$ 프로그램의 **형태**에 대한 규정
+
 **의미(Semantics)** $\Rightarrow$ 프로그램의 **동작**에 대한 규정
 
 - 구문 표기법
