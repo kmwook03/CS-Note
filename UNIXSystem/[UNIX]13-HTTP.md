@@ -102,6 +102,60 @@ $\Rightarrow$ stack memory 증가 + context switching 증가 + scheduler 부하
 **Solution: thread pool**
 Worker thread 8개만 고정하고 클라이언트 요청은 queue에 넣어 처리함
 
+#### select 기반
+여러 소켓을 동시에 감시하는 가장 오래된 I/O multiplexing 방식
+
+```
+            select
+        ┌─────┴─────┐
+        │     │     │
+      소켓A  소켓B  소켓C
+        │     │     │
+       [ ]   [O]   [ ]
+              │
+       select가 B 반환함
+```
+
+`select()`가 중요한 이유
+
+* thread 1개로 여러 socket 감시가 가능해졌다.
+* $\Rightarrow$ 동시 처리 good
+
+```
+서버 흐름
+
+    socket()
+    bind()
+    listen()
+    FD_SET()
+    select()
+    accept()
+    read()
+    write()
+```
+
+```c
+int select(
+    int 		maxfdp1,    /* 최대 fd 번호 크기 */
+    fd_set 	*readfds,   /* 읽기 상태 변화 감지할 소켓 지정 */
+    fd_set 	*writefds,  /* 쓰기 상태 변화 감지할 소켓 지정 */
+    fd_set 	*exceptfds, /* 예외 상태 변화 감지할 소켓 지정 */
+    struct timeval *tvptr      /* select() 시스템 콜 대기 시간 */
+);
+```
+
+* 중요한 특징
+    
+    * `select(maxfd + 1, ...)`
+    * `[0, maxfd1]` 범위만큼 검사하기 때문에 최대 fd 번호 + 1로 설정한다.
+
+* 한계
+
+    * $O(n)$ 검사
+    * fd 개수 제한
+    * 매번 fd_set 복사(커널 $\leftrightarrow$ 유저 복사)
+
+
 #### epoll 기반
 리눅스의 고성능 I/O 이벤트 처리 시스템인 epoll을 활용하여 클라이언트 요청을 처리한다.
 
