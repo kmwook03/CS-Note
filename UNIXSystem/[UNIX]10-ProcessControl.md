@@ -32,11 +32,6 @@ pid_t waitpid(pid_t pid, int *statloc, int options);
 ### Zombie Process
 자식 프로세스가 종료되었지만, 부모 프로세스가 아직 그 자식의 종료 상태를 회수하지 않아 시스템 프로세스 테이블에 껍데기 정보만 남아있는 상태
 
-* Case 1: 부모가 wait() 없이 늦게 종료
-* Case 2: 좀비 상태일 때 부모가 종료됨
-
-어떤 경우든, 부모가 종료되면 좀비 프로세스는 init의 자식으로 입양되어 정리된다.
-
 #### Avoid Zombie Process : Double Fork
 ```c
 #include <stdio.h>
