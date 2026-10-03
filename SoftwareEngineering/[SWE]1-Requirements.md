@@ -10,6 +10,12 @@
 
 Stakeholder의 요구사항은 대체로 모호하기 때문에 요구분석이 중요함.
 
+* 요구 분석 절차
+
+  1. 요구사항 도출(Elicitation)
+  2. 요구사항 분석(Analysis)
+  3. 요구사항 명세(Specification)
+
 ### Requirement Analysis
 
 시스템은 상호작용하는 External Entity가 존재함.
